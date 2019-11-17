@@ -5,7 +5,7 @@ target/
 build/
 robovm-build
 *.o
-*.so
+#*.so
 *.class
 /vtm-tests/tmp/
 /vtm-web/war/
