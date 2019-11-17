@@ -1,5 +1,7 @@
+
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'digital.wup.android-maven-publish'
 
 dependencies {
     api project(':vtm')
@@ -32,6 +34,22 @@ android {
     }
 
     lintOptions { abortOnError false }
+/*
+
+    val sourcesJar by tasks.registering(Jar::class) {
+        archiveClassifier.set("sources")
+        from(android.sourceSets.getByName("main").java.srcDirs)
+    }
+*/
+
+
+    publishing {
+        publications {
+            mavenAar(MavenPublication) {
+                from components.android
+            }
+        }
+    }
 }
 
 android.libraryVariants.all { variant ->
