@@ -36,7 +36,7 @@ class MapFragment : BaseMapFragment() {
     mapScaleBar.setDistanceUnitAdapter(MetricUnitAdapter.INSTANCE)
     mapScaleBar.setSecondaryDistanceUnitAdapter(ImperialUnitAdapter.INSTANCE)
     mapScaleBar.setScaleBarPosition(MapScaleBar.ScaleBarPosition.BOTTOM_LEFT)
-    
+
 
     val mapScaleBarLayer = MapScaleBarLayer(map, mapScaleBar)
     val renderer = mapScaleBarLayer.renderer
