@@ -27,6 +27,9 @@ android {
     main {
       manifest.srcFile 'AndroidManifest.xml'
       java.srcDirs = ['src']
+      file("${rootDir}/vtm-android/natives").eachDir() { dir ->
+        jniLibs.srcDirs += "${dir.path}/lib"
+      }
     }
     debug.setRoot('build-types/debug')
     release.setRoot('build-types/release')

@@ -33,9 +33,13 @@ android {
 
 dependencies {
 
-  implementation(project(":vtm-android"))
-  implementation(project(":vtm-http"))
-  implementation(project(":vtm-themes"))
+  //implementation(project(":vtm-android"))
+  implementation("com.github.danbrough.vtm:vtm-android:master-SNAPSHOT")
+  implementation("com.github.danbrough.vtm:vtm-http:master-SNAPSHOT")
+  implementation("com.github.danbrough.vtm:vtm-themes:master-SNAPSHOT")
+
+  //implementation(project(":vtm-http"))
+  //implementation(project(":vtm-themes"))
 
   implementation("androidx.appcompat:appcompat:1.1.0")
   implementation("com.google.android.material:material:1.0.0")
