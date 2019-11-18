@@ -33,10 +33,11 @@ android {
 
 dependencies {
 
+  implementation("com.github.danbrough.androidutils:slf4j:1.0.13")
   //implementation(project(":vtm-android"))
-  implementation("com.github.danbrough.vtm:vtm-android:master-SNAPSHOT")
-  implementation("com.github.danbrough.vtm:vtm-http:master-SNAPSHOT")
-  implementation("com.github.danbrough.vtm:vtm-themes:master-SNAPSHOT")
+  implementation("com.github.danbrough.vtm:vtm-android:0.12.0-dan01")
+  implementation("com.github.danbrough.vtm:vtm-http:0.12.0-dan01")
+  implementation("com.github.danbrough.vtm:vtm-themes:0.12.0-dan01")
 
   //implementation(project(":vtm-http"))
   //implementation(project(":vtm-themes"))

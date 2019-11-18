@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VTM Simple</string>
+    <string name="app_name">VTM Simple Demo</string>
     <string name="theme_default">Default</string>
     <string name="theme_osmarender">Osmarender</string>
     <string name="theme_osmagray">Osmagray</string>

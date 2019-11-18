@@ -32,9 +32,9 @@ abstract class BaseMapFragment : Fragment() {
 
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
 
     prefs = MapPreferences(this.javaClass.name, context)
-
 
     tileSource = OSciMap4TileSource.builder()
         .httpFactory(
@@ -55,12 +55,19 @@ abstract class BaseMapFragment : Fragment() {
 
     baseLayer = map.setBaseMap(tileSource)
 
+
+
     /* set initial position on first run */
     val pos = MapPosition()
     map.getMapPosition(pos)
     if (pos.x == 0.5 && pos.y == 0.5)
-      map.setMapPosition(53.08, 8.83, Math.pow(2.0, 16.0))
+      map.setMapPosition(-41.29, 174.77, Math.pow(2.0, 14.0))
+
+    createLayers()
+
   }
+
+  abstract fun createLayers()
 
   override fun onResume() {
     super.onResume()
